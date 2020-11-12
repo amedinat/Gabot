@@ -1,0 +1,8 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'actions/**'
+    - 'Dockerfile'
