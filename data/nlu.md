@@ -1,0 +1,422 @@
+## intent:greet
+- hola
+- que tal
+- buenos dias
+- buenas tardes
+- buenas noches
+- que hay
+- ¿cómo estás?
+- Hey
+- cómo estás?
+- buenas
+- hay alguien aquí?
+- que hay de nuevo?
+- Hola
+- hol
+- hola que tal?
+- buen dia
+- Entonces?
+- que hay?
+- Buenas tardes
+
+## intent:goodbye
+- nos vemos
+- chao
+- hasta luego
+- adiós
+- que estés bien
+- nos vemos luego
+- bye
+- hablamos luego
+- hablamos despues
+
+## intent:stop
+- nos demoramos?
+- esto es necesario?
+- no continuemos
+- no quiero seguir
+- no más
+- no me pidas datos
+- para que es esto?
+- es necesario?
+- ya te di mis datos
+
+## intent:thankyou
+- gracias
+- muchas gracias
+- muy amable
+- que amable
+- estoy agradecido
+- muy agradecido
+- tks
+- thanks
+- mil gracias
+- un millon de gracias
+- Gracias
+- Muy amable
+- vale...
+
+## intent:affirm
+- si
+- por supuesto
+- de acuerdo
+- esos suena bien
+- correcto
+- así es
+- me encantaría
+- que bien
+- claro
+- seguro
+- ok
+- porque no
+- sip
+- excelente
+- ok..
+- listo
+
+## intent:deny
+- no
+- nunca
+- yo no creo
+- no me gusta eso
+- no hay forma
+- no realmente
+- de ninguna manera
+- jamas
+- ni por error
+- no sé
+- para nada
+- nop
+
+## intent:mood_great
+- perfecto
+- muy bien
+- super
+- genial
+- maravillosamente
+- maravilloso
+- me siento muy bien
+- estoy bien
+- bien
+- bien gracias
+
+## intent:company_info
+- quienes son ustedes?
+- que es gtk?
+- que hace Gattaca?
+- que hace esta compañía?
+- empresa
+- que hace esta empresa?
+- quienes son?
+- ustedes
+- que hace su empresa
+- Hola Cortana
+
+## intent:bot_challenge
+- Quien eres?
+- eres un robot?
+- eres un bot?
+- eres humano?
+- estoy chateando con un bot?
+- estoy chateando con un humano?
+- estoy hablando con un bot?
+- estoy hablando con un humano?
+- eres humano?=
+
+## intent:mood_unhappy
+- triste
+- mal
+- muy mal
+- very sad
+- infeliz
+- horrible
+- terrible
+- no muy bien
+- extremadamente mal
+- muy triste
+- aburrido
+- preocupado
+- enfurecido
+- estresado
+- enojado
+- estoy enojado
+- estoy preocupado.
+- estoy enfurecido
+- un poco preocupado
+
+## intent:customer_contact_operations
+- Mi [bpm](service) está [fallando](service)
+- tengo un problema
+- [soporte](gtk_contact)
+- [soporte técnico](gtk_contact)
+- [operaciones](gtk_contact)
+- ticket
+- ayuda
+- caso abierto
+- problema
+- bug
+- bloqueo
+- service caido
+- no funciona
+- tengo caído el servidor de producción
+- Mi servicio de Hosting está fallando.
+- Mi servicio está fallando
+- mi servicio está fallando
+- el micrositio de [Copnia](company) está presentando problemas
+- tengo un problema con mi [BPM](service)
+- hola tengo un problema
+- MI sitio de internet está fallando
+
+## intent:customer_contact_manager
+- el que manda
+- [gerencia](gtk_contact)
+- [luis](person_short_name)
+- tatis
+- [el gerente](gtk_contact)
+- [propietario](gtk_contact)
+- [dueño](gtk_contact)
+- autoridad
+- soy John y quiero hablar con el jefe
+- me puedes comunicar con tu jefe?
+- quiero hablar con tu [jefe](gtk_contact)
+- quiero contactar al [gerente](gtk_contact)
+- quiero hablar con el [gerente](gtk_contact)
+- entonces comunícame con el [gerente](gtk_contact)
+- quiero habalr con tu jefe
+- Hola quiero hablar con el dueño de la empresa
+
+## intent:customer_interest
+- ¿que products ofrecen?
+- ¿ustedes hacen [desarrollo](service)?
+- ¿ustedes hacen [procesos](service)?
+- ¿ustedes hacen [BPM](service)?
+- ¿que es un [robot](service)?
+- ¿que es un proceso?
+- ¿ustedes hacen [RPA](service)?
+- ¿que es [RPA](service)?
+- ¿que es [BPM](service)?
+- ¿saben de .[NET](service)?
+- estoy ineteresado en
+- automatizar
+- mejorar mis procesos
+- inteligencia artificial
+- ¿que puedo encontrar aquí?
+- ¿que hacern aquí?
+- que hacen aqui?
+- que venden aqui?
+- que hacen ustedes?
+- hacen desarrollo?
+- ustedes saben de [Python](service)?
+- que servicios tienen?
+- que hacen ahi?
+- Venden RPA?
+- quiero saber si ustedes desarrollanç
+- tengo un proyecto y quiero ayuda
+- aqui trabajan en [Bizagi](product)?
+- hola que es [BPM](service)?
+- Hola necesito saber cuanto vale un [BPM](service)
+- necesito trabajar
+
+## intent:wanna_know_sucessCases
+- casos de éxito
+- casos de exito
+- tarjetas profesionales desmaterializadas
+- Copnia
+- Terpel
+- Desmaterialización
+- Automatización de la gestión de compras
+- Procesamiento de transacciones financieras 
+- alta disponibilidad
+- Switch transaccional
+- Banco Agrario
+- procesamiento de solicitudes de crédito
+- DENTIX 
+- PEPPER
+- gestión de siniestros 
+- BNP 
+- Cardif Perú
+- Servicios de soporte a la operación  
+- procesos digitales
+- COLPENSIONES
+- Core de operación de Vehículos 
+- AKT
+- FOTÓN
+- CORAUTOS
+- Optimización de tiempos de originación 
+- fábrica de crédito 
+- libranzas 
+- Banco Popular
+- Gestión de Proveedores
+- TECNOQUÍMICAS
+
+
+## intent:inform
+- Matrículas y Certificados
+- soy [Catalina](person_short_name)
+- soy [Cata](person_short_name)
+- soy [Oscar](person_short_name)
+- soy [Johana](person_short_name)
+- soy [Joha](person_short_name)
+- soy [John](person_short_name)
+- soy [Luis](person_short_name)
+- Felipe
+- [Juan](person_short_name)
+- soy [Johan](person_short_name)
+- mi nombre es [Luis](person_short_name)
+- [correo@olimpia.com](business_email)
+- [Olimpia](company)
+- [Copnia](company)
+- [FAC](company)
+- [Terpel](company)
+- [TQ](company)
+- [Global](company)
+- [Global Seguros](company)
+- [CGR](company)
+- [Contraloría](company)
+- 48944165
+- [Lida](person_short_name)
+- [Payc](company)
+- [Acelerador](company_project)
+- 15546
+- 253.
+- lcr
+- MI empresa es [Payc](company)
+- Trabajo para [Microsoft](company)
+- trabajo en [Google](company)
+- Facebook
+- Jairo
+- [Pepa](company)
+- 484561561
+- [Pólizas de Educativo](company_project)
+- [Edgar](person_short_name)
+- [Francisco](person_short_name)
+- [Johana](person_short_name)
+- [Catalina](person_short_name)
+- [Oscar](person_short_name)
+- [Carlos](person_short_name)
+- [Layma](person_short_name)
+- [Teresa](person_short_name)
+- [Astrid](person_short_name)
+- [Juanita](person_short_name)
+- [Jesus](person_short_name)
+- [Julian](person_short_name)
+- [Gestión de Cambios](company_project)
+- [Gestión de Proveedores](company_project)
+- [Generación de Créditos](company_project)
+- [Amedinat@hotmail.com](business_email)
+- [Alex](person_short_name)
+- Punto Blanco
+- [Luis](person_short_name) Tatis
+- [mnklnhñlkn@sdsada.com](business_email)
+- soy [Jairo Guzman](person_name) de [Copnia](company)
+- sahdkjsahdk@sdsad.com
+- [Ivan Machado](person_name)
+- [Luis](person_short_name) Tatis SAS
+- [jlaverde@gattaca.co](business_email)
+- [odiazcolombia@gmail.com](business_email)
+- UEFA
+- 61651658
+- [Oscar](person_short_name) [Díaz](company)
+- [Johana Laverde](person_short_name)
+- Jaime Dominguez
+- 1465156
+- [ivanmachado@copnia.gov.co](company)
+- [Julio Ltda](person_short_name)
+- Unicef
+- UNICEF
+- jmedina@fernando.co
+- Fernando Javier Medina
+- CInemax
+- heredero@realacademia.com
+- El chiringuito
+- Compromucho [ltda](person_short_name)
+- Cinevision
+- [amedinat@bizagi.com](product)
+- Bommaniatics
+- Hi Siri
+- la casa
+- Hola Cortana...
+
+## intent:customer_contact_commercial
+- [ventas](gtk_contact)
+- comercial
+- quiero hablar con las personas de [ventas](gtk_contact)
+- quiero charlar con la gente de [ventas](gtk_contact)
+- quiero hablar con los comerciales
+- quiero charlar con la gente de [comercial](gtk_contact)
+- por favor agendame una llamda con [ventas](gtk_contact)
+- por favor agendame una llamda con [comercial](gtk_contact)
+- conectame con alguien de [ventas](gtk_contact)
+- [ventas](gtk_contact) por favor
+- quiero hablar con ventas
+- con [comercial](gtk_contact)
+- quiero hablar con un comercial
+- quiero hablar con [comercial](gtk_contact)
+- hola quiero hablar con comercial
+- Quiero comprar
+- Necesito una propuesta [comercial](gtk_contact)
+- Necesito una oferta
+- necesito una propuesta [comercial](gtk_contact)
+- hola quiero una libra de [procesos](service)
+- quiero un [bpm](service)
+- hola quiero un [robot](service)
+- Quiero un [DPA](service) para llevar
+
+## intent:customer_choice_development
+- Desarrollo a la medida
+- [desarrollo](service)
+- [java](service)
+- [microsoft](service)
+- [net](service)
+- [c#](service)
+- [python](service)
+- [siga](product)
+- [machine learning](service)
+- [inteligencia artificial](service)
+- [bases de datos](service)
+
+## intent:customer_choice_RPA
+- [rpa](service)
+- [robots](service)
+- [uipath](product)
+- [automation](product)
+- [robot](service)
+- [automatización](service)
+- [chatbots](service)
+- [chats](service)
+- Usan [UIPath](product)?
+- Rasa [ChatBots](service)
+
+## intent:customer_choice_BPM
+- [bpm](service)
+- [dpa](service)
+- Automatización digital de [Procesos](service)
+- [bizagi](product)
+- [procesos](service)
+- [bonita](product)
+- administrador de [procesos](service)
+- Usan [Apian](product)?
+- Usan [Bizagi](product)?
+- Usan [Bonita](product)?
+- que es [bpm](service)?
+
+## intent:customer_choice_consultancy
+- [consultoría](service)
+- no sé
+- cómo hacer
+- expertos
+- [apoyo](service)
+- [entendimiento](service)
+- [levantamiento](service)
+- definir
+- [diseñar](service)
+
+## intent:ChitChat
+- que hora es?
+- cuantas personas trabajan en Gattaca?
+- Quien es el dueño?
+- Hoy lloverá?
+- Quiero una Pizza...
+- quiero pedir un domicilio
+- quiero saber que hora es?
+- quiero un domicilio

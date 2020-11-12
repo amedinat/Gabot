@@ -1,0 +1,144 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    triggers: action_greet
+- mood_great
+- goodbye
+- affirm
+- deny
+- stop
+- thankyou
+- mood_unhappy
+- bot_challenge
+- customer_interest
+- customer_contact_operations
+- customer_contact_commercial
+- customer_contact_manager
+- customer_choice_development
+- customer_choice_RPA
+- customer_choice_BPM
+- customer_choice_consultancy
+- company_info
+- inform
+- ChitChat
+- explain
+- wanna_know_sucessCases
+entities:
+- company
+- company_project
+- person_name
+- business_email
+- service
+- product
+- gtk_contact
+- boss_comments
+- person_short_name
+slots:
+  boss_comments:
+    type: text
+  business_email:
+    type: unfeaturized
+  company:
+    type: unfeaturized
+  company_project:
+    type: unfeaturized
+  email_message:
+    type: unfeaturized
+  email_subject:
+    type: unfeaturized
+  email_to_address:
+    type: unfeaturized
+  gtk_contact:
+    type: unfeaturized
+  person_mobile:
+    type: unfeaturized
+  person_name:
+    type: unfeaturized
+  person_short_name:
+    type: unfeaturized
+  product:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  service:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Hola, mi nombre es Gabot. Soy un asistente contextual provisto por Gattaca.
+      ¿Cómo puedo ayudarte?
+  utter_wanna_know_sucessCases:
+  - text: Cómo quieres conocer más acerca de nuestros casos de éxito, por favor déjame
+      tus datos y un compañero de comercial te contactará.
+  utter_moreinfo:
+  - text: De acuerdo, voy a pedirte unos datos para ponerte en contacto con un compañero,
+      quien te dará más información.
+  utter_ask_company:
+  - text: ¿De qué empresa nos contactas?
+  utter_ask_company_project:
+  - text: ¿Sobre qué proyecto partícular es tu consulta?
+  utter_ask_business_email:
+  - text: ¿Cúal es tu correo electrónico?
+  utter_ask_person_mobile:
+  - text: ¿Cúal es tu número de celular?
+  utter_ask_person_name:
+  - text: ¿Cúal es tu nombre?
+  utter_ask_boss_comments:
+  - text: ¿Cuáles son los comentarios que tienes?
+  utter_diditwell:
+  - text: ¿Esta conversación te fue de ayuda?
+  utter_goodbye:
+  - text: Hasta luego, que estés bien; Ya puedes cerrar el chat.
+  utter_happy:
+  - text: ¡Genial, continuemos!
+  utter_Gattaca_Info:
+  - text: Somos Gattaca, una empresa de ingeniería e innovación en la automatización
+      digital de procesos.
+  utter_Development_Info:
+  - text: Gattaca pude apoyarte con desarrollo a la medida en Net, Java, Python y
+      Machine Larning.
+  utter_BPM_Info:
+  - text: Gattaca puede ser tu mano derecha digitalizando tus procesos en BPM con
+      Bizagi, Bonita o Appian.
+  utter_Consultancy_Info:
+  - text: Gattaca es experto en consultoría de procesos y automatización digital.
+  utter_iamabot:
+  - text: Los humanos me dan diferentes nombres bot, chatbot, un asistente. Pero lo
+      más importante es que estoy para ayudarte. =)
+  utter_ask_continue:
+  - text: ¿Quieres continuar?
+  utter_noworries:
+  - text: Ha sido un placer. =)
+  utter_explain_person_name:
+  - text: Es para poder contactarte de mejor manera.
+  utter_i_cant_do_that:
+  - text: Lo siento, creo que no te puedo ayudar con eso.  XD
+  utter_ourservices:
+  - buttons:
+    - payload: /customer_choice_consultancy
+      title: Consultoría
+    - payload: /customer_choice_BPM
+      title: Automatización de Procesos
+    - payload: /customer_choice_development
+      title: Desarrollo a la Medida
+    - payload: /customer_choice_RPA
+      title: RPA
+    text: ¿En qué servicio estás interesado?
+  utter_unhappy:
+  - buttons:
+    - payload: /customer_contact_operations
+      title: Operaciones
+    - payload: customer_contact_commercial
+      title: Comercial
+    - payload: /customer_want_talk_to_boss
+      title: Gerencia
+    text: Entiendo {person_short_name}, ¿Con quieres entrar en contacto?
+actions:
+- action_greet
+- action_default_fallback
+- action_send_mail
+forms:
+- sales_form
+- operations_form
+- manager_form
