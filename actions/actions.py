@@ -19,7 +19,6 @@ logger = logging.getLogger(__name__)
 vers = "vers: 0.1.0, date: Octubre 09, 2020"
 logger.debug(vers)
 
-
 #===============CONSTANTS=====================
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 465
@@ -35,7 +34,6 @@ TO_SALES_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
 TO_OPERATIONS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
 TO_BOSS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
 #===========================================
-
 
 #===============ACTIONS=====================
 class ActionGreetUser(Action):
