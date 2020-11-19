@@ -34,7 +34,6 @@ FROM_EMAIL_PASSWORD ='Bogota.GTK.2019*'
 TO_SALES_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
 TO_OPERATIONS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
 TO_BOSS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
-
 #===========================================
 
 
