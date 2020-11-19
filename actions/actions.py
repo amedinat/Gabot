@@ -27,13 +27,13 @@ SMTP_PORT = 465
 FROM_EMAIL_ADDRESS = 'notificaciones@e-gattaca.com'
 FROM_EMAIL_PASSWORD ='Bogota.GTK.2019*'
 
-TO_SALES_EMAIL_ADDRESS  = 'comercial@gattaca.co'
-TO_OPERATIONS_EMAIL_ADDRESS  = 'antonio.almonacid@gattaca.co'
-TO_BOSS_EMAIL_ADDRESS  = 'comercial@gattaca.co'
+#TO_SALES_EMAIL_ADDRESS  = 'comercial@gattaca.co'
+#TO_OPERATIONS_EMAIL_ADDRESS  = 'antonio.almonacid@gattaca.co'
+#TO_BOSS_EMAIL_ADDRESS  = 'comercial@gattaca.co'
 
-#TO_SALES_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
-#TO_OPERATIONS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
-#TO_BOSS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
+TO_SALES_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
+TO_OPERATIONS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
+TO_BOSS_EMAIL_ADDRESS  = 'jmedina@gattaca.co'
 
 #===========================================
 
