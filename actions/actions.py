@@ -16,7 +16,7 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
 
 logger = logging.getLogger(__name__)
-vers = "vers: 0.1.0, date: Octubre 09, 2020"
+vers = "vers: 0.2.0, date: Noviembre 11, 2020"
 logger.debug(vers)
 
 #===============CONSTANTS=====================
