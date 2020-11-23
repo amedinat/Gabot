@@ -8,7 +8,6 @@ WORKDIR /app
 ADD ./models /app/models/
 ADD ./actions /app/actions/
 ADD ./data /app/data/
-ADD ./test /app/test/
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
 
