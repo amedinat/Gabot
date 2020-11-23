@@ -6,10 +6,9 @@ USER root
 WORKDIR /app
 
 ADD ./models /app/models/
-ADD ./config /app/config/
 ADD ./actions /app/actions/
-ADD ./scripts /app/scripts/
 ADD ./data /app/data/
+ADD ./test /app/test/
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
 
@@ -20,7 +19,7 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt --use-feature=2020-resolver --no-cache-dir
 
-VOLUME ["/app/model", "/app/config", "/app/project", "/app/dialogue"]
+VOLUME ["/app/model", "/app/project", "/app/dialogue"]
 
 
 # Make sure the default group has the same permissions as the owner
