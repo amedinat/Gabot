@@ -21,6 +21,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64
+          platforms: linux/amd64
           push: true
           tags: user/app:latest
