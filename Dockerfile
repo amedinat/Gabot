@@ -4,6 +4,8 @@ WORKDIR /app
 #install dependencies inside Docker container
 USER root 
 
+RUN python -m pip install --upgrade pip
+
 # Copy as early as possible so we can cache ...
 COPY requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
