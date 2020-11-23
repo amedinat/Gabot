@@ -1,19 +1,24 @@
 FROM python:3.7.9-slim
 
-WORKDIR /app
 #install dependencies inside Docker container
 USER root 
+
+WORKDIR /app
+
+ADD ./models /app/models/
+ADD ./config /app/config/
+ADD ./actions /app/actions/
+ADD ./scripts /app/scripts/
+ADD ./data /app/data/
+ADD ./domain.yml /app/
+ADD ./config.yml /app/
 
 RUN python -m pip install --upgrade pip
 
 # Copy as early as possible so we can cache ...
 COPY requirements.txt .
-RUN pip install -r requirements.txt --no-cache-dir
 
-COPY . .
-
-
-RUN pip install -e . --no-cache-dir
+RUN pip install -r requirements.txt --use-feature=2020-resolver --no-cache-dir
 
 VOLUME ["/app/model", "/app/config", "/app/project", "/app/dialogue"]
 
