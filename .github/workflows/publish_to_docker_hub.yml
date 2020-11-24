@@ -31,9 +31,7 @@ jobs:
           target: test
           platforms: linux/amd64
           push: true
-          tags: user/app:latest
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache
+          tags: user/app:latest       
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}    
