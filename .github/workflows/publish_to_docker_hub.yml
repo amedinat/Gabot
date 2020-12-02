@@ -1,6 +1,4 @@
 name: Publish Docker image
-description: 'Pull templates from aGithub try to create Image on Docker remote repository'
-author: 'John Medina'
 on:
   release:
     types: [published]
