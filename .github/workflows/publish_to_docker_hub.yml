@@ -32,6 +32,7 @@ jobs:
           context: .
           file: ./Dockerfile          
           platforms: linux/amd64
+          build-args: BUILD_ENV=development
           
 
       - name: Docker Hub Description
