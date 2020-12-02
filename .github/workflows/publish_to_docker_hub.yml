@@ -1,4 +1,6 @@
 name: Publish Docker image
+description: 'Pull templates from aGithub try to create Image on Docker remote repository'
+author: 'John Medina'
 on:
   release:
     types: [published]
@@ -9,6 +11,9 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1  
 
       - name: Set up Docker Buildx
         id: buildx
@@ -24,12 +29,12 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:         
-          context: ./
-          file: ./Dockerfile
-          target: test
+          push: true  
+          tags: user/app:latest          
+          context: .
+          file: ./Dockerfile          
           platforms: linux/amd64
-          push: true
-          tags: user/app:latest  
+          
 
       - name: Docker Hub Description
         if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/') && success()
