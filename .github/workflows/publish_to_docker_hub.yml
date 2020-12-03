@@ -10,6 +10,9 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
+
+      
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1  
 
@@ -29,14 +32,13 @@ jobs:
         with:         
           push: true  
           tags: user/app:latest          
-          context: .
+          context: ./
           file: ./Dockerfile          
           platforms: linux/amd64
           build-args: |
             BUILD_ENV=development
             VERSION=${{ steps.prep.outputs.version }}
-            BUILD_DATE=${{ steps.prep.outputs.build_date }}
-            VCS_REF=${{ steps.prep.outputs.vcs_ref }}
+            BUILD_DATE=${{ steps.prep.outputs.build_date }}          
           
 
       - name: Docker Hub Description
