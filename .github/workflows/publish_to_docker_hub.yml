@@ -10,8 +10,13 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
-
-      
+      - name: Prepare
+        id: prep
+        run: |
+          DOCKER_IMAGE=${{ secrets.DOCKER_HUB_REPOSITORY }}          
+          echo ::set-output name=docker_image::${DOCKER_IMAGE}
+          echo ::set-output name=version::${MINOR_VERSION}
+          echo ::set-output name=BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')          
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1  
