@@ -1,8 +1,0 @@
-
-variables:
-  DOMAIN: example.com
-  WEBHOOK_URL: https://my-webhook.example.com
-stages:
-  - build
-  - test
-  - deploy
