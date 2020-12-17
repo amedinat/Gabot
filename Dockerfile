@@ -27,5 +27,5 @@ RUN chgrp -R 0 . && chmod -R g=u .
 # Don't run as root
 USER 1001
 EXPOSE 5005
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["start", "-d", "./dialogue"]
