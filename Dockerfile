@@ -10,6 +10,7 @@ ADD ./actions /app/actions/
 ADD ./data /app/data/
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
+ADD ./install.sh /app/
 
 
 RUN python -m pip install --upgrade pip
