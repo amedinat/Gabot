@@ -11,6 +11,7 @@ ADD ./data /app/data/
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
 
+
 RUN python -m pip install --upgrade pip
 
 # Copy as early as possible so we can cache ...
@@ -27,5 +28,5 @@ RUN chgrp -R 0 . && chmod -R g=u .
 # Don't run as root
 USER 1001
 EXPOSE 5005
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/app/install.sh"]
 CMD ["start", "-d", "./dialogue"]
