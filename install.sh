@@ -35,7 +35,6 @@ echo "Installing docker role"
 sudo /usr/local/bin/ansible-galaxy install geerlingguy.docker
 echo "Docker role for ansible has been installed"
 
-
 if [[ "$RUN_ANSIBLE" == "true" ]]; then
     #######################################
     #

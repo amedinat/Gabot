@@ -29,5 +29,6 @@ RUN chgrp -R 0 . && chmod -R g=u .
 # Don't run as root
 USER 1001
 EXPOSE 5005
+RUN ["chmod", "+x", "/app/install.sh"]
 ENTRYPOINT ["/app/install.sh"]
-CMD ["start", "-d", "./dialogue"]
+CMD ["start", "-d", "./app/dialogue"]
