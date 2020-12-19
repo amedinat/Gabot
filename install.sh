@@ -14,21 +14,33 @@ RUN_ANSIBLE=${RUN_ANSIBLE:-true}
 echo "Installing pip and ansible"
 
 if [[ $ID =~ centos|rhel ]]; then
-
+    echo "Centos o RedHat el"
     sudo yum update -y
     sudo yum install -y python3
     sudo yum install -y python3-distutils || :  # if the package is not available and the command fails, do nothing,
                                                     # the distutils are already installed
 elif [[ $ID =~ ubuntu|debian ]]; then
+    echo "Ubuntu o Debian"    
     sudo apt-get update -y
-    sudo apt-get install -y python3
+    echo "sudo updated"    
+    echo "Install curl"    
+    sudo apt-get install curl --assume-yes
+    echo "Installed curl" 
+    sudo apt-get install -y python3    
     sudo apt-get install -y python3-distutils || :  # if the package is not available and the command fails, do nothing,
                                                        # the distutils are already installed
+    sudo apt-get install python3-apt --assume-yes
     sudo apt-get install -y wget || :  # wget may already be installed; do nothing if it is
+    
 fi
+echo "Installed python 3 and utils"
+pwd
 
 curl -O https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
+echo "Installed get-pip.py"
+
+echo "Install ansible"
 sudo /usr/local/bin/pip install "ansible>-2.9, <2.10"
 
 echo "Installing docker role"
