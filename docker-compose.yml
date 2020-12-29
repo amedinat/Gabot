@@ -75,7 +75,7 @@ services:
       - ./models:/app/models
       - ./environments.yml:/app/environments.yml
       - ./credentials.yml:/app/credentials.yml
-      - ./config/endpoints.yml:/app/endpoints.yml
+      - ./endpoints.yml:/app/endpoints.yml
       - ./logs:/logs
       - ./auth:/app/auth
     environment:
@@ -173,12 +173,12 @@ services:
       - "80:8080"
       - "443:8443"
     volumes:
-      - ./certs:/opt/bitnami/certs
-      - ./terms:/opt/bitnami/nginx/conf/bitnami/terms
+      - ./certs:/etc/rasa/certs
+      - ./terms:/etc/rasa/terms      
     depends_on:
       - rasa-x
       - rasa-production
-      - app
+      - app     
 
   redis:
     restart: always

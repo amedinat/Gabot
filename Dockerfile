@@ -10,6 +10,7 @@ ADD ./actions /app/actions/
 ADD ./data /app/data/
 ADD ./domain.yml /app/
 ADD ./config.yml /app/
+ADD ./. /app/
 
 
 RUN python -m pip install --upgrade pip
@@ -22,18 +23,15 @@ ADD ./sudoers.txt /etc/sudoers
 RUN chmod 440 /etc/sudoers
 RUN chmod 447 /app
 
-
-
 # Copy as early as possible so we can cache ...
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-VOLUME ["/app/model", "/app/project", "/app/dialogue"]
+#VOLUME ["/app/model", "/app/project", "/app/dialogue"]
 
 # Make sure the default group has the same permissions as the owner
 RUN chgrp -R 0 . && chmod -R g=u .
-
 
 # Don't run as root
 USER docker_usr
@@ -43,4 +41,5 @@ ADD ./install.sh /app/
 EXPOSE 5005
 
 ENTRYPOINT /app/install.sh
-CMD ["start", "-d", "./app/dialogue"]
+#CMD ["start", "-d", "./app/dialogue"]
+CMD ["rasa", "x", "–enable-api", "-p", "80", "–cors", "*", "–no-prompt"]

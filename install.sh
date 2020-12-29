@@ -27,6 +27,8 @@ elif [[ $ID =~ ubuntu|debian ]]; then
     sudo apt-get install curl --assume-yes
     echo "Installed curl" 
     sudo apt-get install -y python3    
+    # Update Python location
+    sudo ln -sf /usr/bin/python3 /usr/bin/python
     sudo apt-get install -y python3-distutils || :  # if the package is not available and the command fails, do nothing,
                                                        # the distutils are already installed
     sudo apt-get install python3-apt --assume-yes
@@ -53,9 +55,9 @@ if [[ "$RUN_ANSIBLE" == "true" ]]; then
     # downloading the ansible playbook
     # for the passed in version or latest
     #
-    #######################################
-    echo "Downloading Rasa X playbook"
-    wget -qO rasa_x_playbook.yml https://storage.googleapis.com/rasa-x-releases/0.33.2/rasa_x_playbook.yml
+    #######################################    
+    echo "Downloading Rasa X playbook"    
+    wget -qO rasa_x_playbook.yml https://storage.googleapis.com/rasa-x-releases/0.34.0/rasa_x_playbook.yml
 
     #######################################
     #
@@ -65,4 +67,11 @@ if [[ "$RUN_ANSIBLE" == "true" ]]; then
     #######################################
     echo "Running playbook"
     sudo /usr/local/bin/ansible-playbook -i "localhost," -c local rasa_x_playbook.yml
+
+    echo "Change ownership terms directory"
+    pwd
+    sudo chown -R docker_usr:root /etc/rasa/terms
+    sudo chmod u+w /etc/rasa/terms
+    sudo bash -c 'echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt'    
+    #echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt
 fi
