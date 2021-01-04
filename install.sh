@@ -70,7 +70,7 @@ if [[ "$RUN_ANSIBLE" == "true" ]]; then
 
     echo "Change ownership terms directory"
     pwd
-    sudo chown -R docker_usr:root /etc/rasa/terms
+    sudo chown -R 1001:root /etc/rasa/terms
     sudo chmod u+w /etc/rasa/terms
     sudo bash -c 'echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt'    
     #echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt

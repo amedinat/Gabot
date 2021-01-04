@@ -69,6 +69,7 @@ services:
   rasa-x:
     restart: always
     image: "rasa/rasa-x:${RASA_X_VERSION}"
+    networks: ['rasa-network']
     expose:
       - "5002"
     volumes:
@@ -95,7 +96,8 @@ services:
   db-migration:
     command: ["python", "-m", "rasax.community.services.db_migration_service"]
     restart: always
-    image: "rasa/rasa-x:${RASA_X_VERSION}"
+    image: "rasa/rasa-x:${RASA_X_VERSION}"    
+    networks: ['rasa-network']
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8000/health || kill 1"]
       interval: 5s
@@ -131,6 +133,7 @@ services:
   app:
     restart: always
     image: "rasa/rasa-x-demo:${RASA_X_DEMO_VERSION}"
+    networks: ['rasa-network']
     expose:
       - "5055"
     depends_on:
@@ -139,6 +142,7 @@ services:
   db:
     restart: always
     image: "bitnami/postgresql:11.9.0"
+    networks: ['rasa-network']
     expose:
       - "5432"
     environment:
@@ -151,6 +155,7 @@ services:
   rabbit:
     restart: always
     image: "bitnami/rabbitmq:3.8.9"
+    networks: ['rasa-network']
     environment:
       RABBITMQ_HOST: "rabbit"
       RABBITMQ_USERNAME: "user"
@@ -162,6 +167,7 @@ services:
   duckling:
     restart: always
     image: "rasa/duckling:0.1.6.4"
+    networks: ['rasa-network']
     expose:
       - "8000"
     command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
@@ -187,3 +193,6 @@ services:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
     expose:
       - "6379"
+    networks: ['rasa-network']  
+
+networks: {rasa-network: {}}

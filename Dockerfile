@@ -18,7 +18,7 @@ RUN python -m pip install --upgrade pip
 RUN apt-get update && apt-get -y install sudo
 
 #Permission to user docker to use sudo
-RUN useradd -m docker_usr && echo "docker_usr:docker_usr" | chpasswd && adduser docker_usr sudo
+RUN useradd -m 1001 && echo "1001:1001" | chpasswd && adduser 1001 sudo
 ADD ./sudoers.txt /etc/sudoers
 RUN chmod 440 /etc/sudoers
 RUN chmod 447 /app
@@ -28,18 +28,22 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-#VOLUME ["/app/model", "/app/project", "/app/dialogue"]
+VOLUME ["/app/model", "/app/project", "/app/dialogue"]
 
 # Make sure the default group has the same permissions as the owner
 RUN chgrp -R 0 . && chmod -R g=u .
 
 # Don't run as root
-USER docker_usr
+USER 1001
+
+
+# Create a volume for temporary data
+VOLUME /tmp
 
 ADD ./install.sh /app/
 
 EXPOSE 5005
 
 ENTRYPOINT /app/install.sh
-#CMD ["start", "-d", "./app/dialogue"]
-CMD ["rasa", "x", "–enable-api", "-p", "80", "–cors", "*", "–no-prompt"]
+CMD ["start", "-d", "./app/dialogue"]
+#CMD ["rasa", "x", "–enable-api", "-p", "80", "–cors", "*", "–no-prompt"]
