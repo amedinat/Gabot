@@ -70,8 +70,9 @@ if [[ "$RUN_ANSIBLE" == "true" ]]; then
 
     echo "Change ownership terms directory"
     pwd
-    sudo chown -R 1001:root /etc/rasa/terms
-    sudo chmod u+w /etc/rasa/terms
-    sudo bash -c 'echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt'    
-    #echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt
+    sudo chown -R 1001:root /opt/bitnami/nginx/conf/bitnami/terms
+    sudo chmod u+w /opt/bitnami/nginx/conf/bitnami/terms
+    sudo touch /opt/bitnami/nginx/conf/bitnami/terms/agree.txt
+    sudo bash -c 'echo "$\{USER\} $\(date\)" > /opt/bitnami/nginx/conf/bitnami/terms/agree.txt'
+   
 fi

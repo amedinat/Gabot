@@ -99,7 +99,7 @@ def create_rasa_x_saml_user(args):
 
 
 def delete_rasa_x_user(args):
-    command = f"delete {args.username}"
+    command = "delete {}".format(args.username)
     if args.delete_created_conversations:
         command += " --delete-created-conversations"
 
