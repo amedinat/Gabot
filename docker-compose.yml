@@ -173,12 +173,13 @@ services:
       - "80:8080"
       - "443:8443"
     volumes:
-      - ./certs:/opt/bitnami/certs
-      - ./terms:/opt/bitnami/nginx/conf/bitnami/terms
+      - ./certs:/etc/rasa/certs
+      - ./terms:/etc/rasa/terms
     depends_on:
       - rasa-x
       - rasa-production
       - app
+    command: bash -c "echo '$${USER} $$(date)' > /opt/bitnami/nginx/conf/bitnami/terms/agree.txt"
 
   redis:
     restart: always

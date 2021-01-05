@@ -69,10 +69,13 @@ if [[ "$RUN_ANSIBLE" == "true" ]]; then
     sudo /usr/local/bin/ansible-playbook -i "localhost," -c local rasa_x_playbook.yml
 
     echo "Change ownership terms directory"
-    pwd
-    sudo chown -R 1001:root /opt/bitnami/nginx/conf/bitnami/terms
-    sudo chmod u+w /opt/bitnami/nginx/conf/bitnami/terms
-    sudo touch /opt/bitnami/nginx/conf/bitnami/terms/agree.txt
-    sudo bash -c 'echo "$\{USER\} $\(date\)" > /opt/bitnami/nginx/conf/bitnami/terms/agree.txt'
+    pwd    
    
+    sudo chmod u+w /etc/rasa/terms    
+    sudo chown -R docker_usr:root /etc/rasa/terms/
+    sudo touch /etc/rasa/terms/agree.txt
+    
+    
+    #sudo bash -c 'echo "$\{USER\} $\(date\)" > /etc/rasa/terms/agree.txt'
+    
 fi

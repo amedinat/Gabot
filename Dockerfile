@@ -31,5 +31,4 @@ ADD ./install.sh /app/
 
 EXPOSE 5005
 ENTRYPOINT /app/install.sh
-
-CMD ["rasa", "x", "–enable-api", "-p", "80", "–cors", "*", "–no-prompt"]
+CMD ["start", "-d", "./app/dialogue"]
